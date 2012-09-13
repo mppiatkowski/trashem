@@ -424,6 +424,10 @@ var Trashem = function(){
 					} 
 				},
 
+				reset : function() {
+					lista.splice(0, lista.length);
+				},
+
 				setTextPos : function(dir,x,y,sizex,sizey) {
 					var xpos,ypos;
 
@@ -512,6 +516,8 @@ var Trashem = function(){
 				clearInterval(iLoopAddKlocek);
 				ctx.clearRect(0, 0, c.width, c.height);
 				that.STOS.usunWszystkie(); 
+				that.score.reset();
+				that.messages.reset();
 				pointer.resetPrzesuniecie();
 				started = false;
 		};
